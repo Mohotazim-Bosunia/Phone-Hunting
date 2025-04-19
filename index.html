@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Phone API</title>
+    <!-- daisyui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisiui end -->
+
+</head>
+<body>
+    <header>
+        <h2 class=>Hunting Phone</h2>
+        
+    </header>
+    <main class="Container mx-auto mt-8">
+      <section class="bg-sky-100 p-4 m-4">
+        <input id="search-field" type="text" placeholder="Search..." class="input input-bordered input-accent w-full max-w-xs" />
+        <button onclick="handleSearch()" class="btn btn-accent ">Search</button>
+      </section>
+
+      
+
+      <!-- Searce result -->
+       <section>
+        <!-- spinner or loader -->
+        <div id="loadingSpinner" class="text-center my-20 hidden">
+          <span class="loading loading-dots loading-xl"></span>
+        </div>
+        <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> 
+            <!-- <div class="card bg-lime-100 w-96 shadow-sm">
+                <figure>
+                  <img
+                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                    alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">Card Title</h2>
+                  <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                  </div>
+                </div> -->
+              </div>
+              <!-- Show all phone -->
+              <div id="show-all-container" class="hidden text-center my-5">
+                <button onclick="handleShowAll" class="btn btn-primary ">Show All</button>
+              </div>
+
+        </div>
+       </section>
+
+       <!-- Show Detail modal -->
+        <!-- Open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="./js/phone.js"></script>
+</body>
+</html>
