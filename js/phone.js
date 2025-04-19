@@ -56,10 +56,12 @@ const displayPhones=phones=>{
         //appoand child
         phoneContainer.appendChild(phoneCard)
     })
-    
+    //hide loading spinner
+    toggleLoadingSpinner(false)
 }
 //handle Search button
 const handleSearch=()=>{
+  toggleLoadingSpinner(true)
   const searchField=document.getElementById("search-field");
   const searchText=searchField.value;
   console.log(searchText)
@@ -67,3 +69,12 @@ const handleSearch=()=>{
   loadPhone(searchText)
 }
 //loadPhone()
+const toggleLoadingSpinner = (isLoading) => {
+  const loadingSpinner=document.getElementById('loadingSpinner');
+  if(isLoading){
+    loadingSpinner.classList.remove('hidden')
+  }
+  else{
+    loadingSpinner.classList.add('hidden')
+  }
+}
